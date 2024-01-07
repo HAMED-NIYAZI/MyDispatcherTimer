@@ -10,7 +10,7 @@ namespace MyDispatcherTimer
     {
         public static int ID { get; set; }
         public static int Name { get; set; }
-        public static List<ActInfo> ActInfos { get; set; }
+        public static List<ActInfo> ActInfos { get; set; }=new List<ActInfo>();
     }
 
 
