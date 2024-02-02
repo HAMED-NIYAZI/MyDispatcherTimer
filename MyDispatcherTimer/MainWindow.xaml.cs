@@ -43,17 +43,33 @@ namespace MyDispatcherTimer
 
             // For example, let's show a message box
 
-            Task.Run(() => {
-               // MessageBox.Show("Scheduler triggered!");
+            Task.Run(() =>
+            {
+                // MessageBox.Show("Scheduler triggered!");
                 string s = "";
                 for (int i = 0; i < 50; i++)
                 {
                     s += i.ToString();
                 }
-                Dispatcher.Invoke(() => {
+
+                Dispatcher.Invoke(() =>
+                {
                     button.Content = ((int.Parse(button.Content.ToString())) + 1).ToString();
                 });
-                             });
+
+            });
+        }
+
+        private void f1_Click(object sender, RoutedEventArgs e)
+        {
+            var f = new Form1();
+            f.Show();
+         }
+
+        private void f2_Click(object sender, RoutedEventArgs e)
+        {
+            var f = new Form1();
+            f.Show();
         }
     }
 }
